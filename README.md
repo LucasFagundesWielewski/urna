@@ -5,8 +5,13 @@ um dispositivo utilizado em eleições para coletar e contar os votos de forma a
 
 ## Screenshots
 
-<img src="images/captura_de_tela.png" alt="" />
+## Urna White
 
+<img src="images/urna_white.png" alt="" />
+
+## Urna Black
+
+<img src="images/urna_black.png" alt="" />
 
 ## Autores
 
