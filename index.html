@@ -1,0 +1,117 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para o documento -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Garantia de compatibilidade com versões antigas do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração para responsividade -->
+    <title>Urna Eletrônica</title>
+    <!-- Título da página -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link para o arquivo CSS -->
+</head>
+
+<body class="light">
+    <div class="urna">
+        <!-- Contêiner principal da urna -->
+        <div class="tela">
+            <!-- Contêiner para a tela da urna -->
+            <div class="container-voto">
+                <!-- Contêiner para as informações do voto -->
+                <div class="info-voto">
+                    <!-- Contêiner para as informações detalhadas do voto -->
+                    <div class="info-voto-titulo">
+                        <!-- Título da seção de voto -->
+                        <span>SEU VOTO PARA</span>
+                    </div>
+                    <div class="info-voto-cargo">
+                        <!-- Cargo para o qual está votando -->
+                        <span>VEREADOR</span>
+                    </div>
+                    <div class="info-voto-numeros">
+                        <!-- Contêiner para os números do voto -->
+                        <div class="numero pisca"></div>
+                        <!-- Campo de número piscante -->
+                        <div class="numero"></div>
+                        <!-- Campo de número -->
+                    </div>
+                    <div class="info-voto-detalhes">
+                        <!-- Detalhes do candidato -->
+                        Nome: Darth Vader<br> Partido: Império<br> Vice-Prefeito: Darth Maul
+                    </div>
+                </div>
+                <div class="info-imagem">
+                    <!-- Contêiner para as imagens do candidato -->
+                    <div class="info-imagem-prefeito">
+                        <!-- Imagem do prefeito -->
+                        <img src="images/66prefeito_vader.png" alt="" /> Prefeito
+                    </div>
+                    <div class="info-imagem-vice">
+                        <!-- Imagem do vice-prefeito -->
+                        <img src="images/66vice_darth.png" alt="" /> Vice-Prefeito
+                    </div>
+                </div>
+            </div>
+            <div class="instrucoes">
+                <!-- Instruções para o usuário -->
+                Aperte a tela:<br/> CONFIMA para CONFIRMAR este voto<br/> CORRIGE para REINICIAR este voto
+            </div>
+        </div>
+        <div class="teclado">
+            <!-- Contêiner para o teclado da urna -->
+            <div class="teclado--linha">
+                <!-- Linha do teclado -->
+                <div class="teclado--botao" onClick="clicou('1')">1</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('2')">2</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('3')">3</div>
+                <!-- Botão do teclado -->
+            </div>
+            <div class="teclado--linha">
+                <!-- Linha do teclado -->
+                <div class="teclado--botao" onClick="clicou('4')">4</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('5')">5</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('6')">6</div>
+                <!-- Botão do teclado -->
+            </div>
+            <div class="teclado--linha">
+                <!-- Linha do teclado -->
+                <div class="teclado--botao" onClick="clicou('7')">7</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('8')">8</div>
+                <!-- Botão do teclado -->
+                <div class="teclado--botao" onClick="clicou('9')">9</div>
+                <!-- Botão do teclado -->
+            </div>
+            <div class="teclado--linha">
+                <!-- Linha do teclado -->
+                <div class="teclado--botao" onClick="clicou('0')">0</div>
+                <!-- Botão do teclado -->
+            </div>
+            <div class="teclado--linha">
+                <!-- Linha do teclado com botões de ação -->
+                <div class="teclado--botao botao--branco" onClick="branco()">BRANCO</div>
+                <!-- Botão de voto em branco -->
+                <div class="teclado--botao botao--corrige" onClick="corrige()">CORRIGE</div>
+                <!-- Botão de correção -->
+                <div class="teclado--botao botao--confirma" onClick="confirma()">CONFIRMA</div>
+                <!-- Botão de confirmação -->
+            </div>
+        </div>
+        <button id="next-vote-btn" class="hidden">Próximo Voto</button>
+    </div>
+    
+    <div class="btn">🖤</div>
+    <script src="etapas.js"></script>
+    <!-- Script para as etapas da votação -->
+    <script src="script.js"></script>
+    <!-- Script principal -->
+    <script src="app.js" defer></script>
+</body>
+
+</html>

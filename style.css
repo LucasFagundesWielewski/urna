@@ -1,0 +1,333 @@
+/* Animação para piscar um elemento */
+
+@keyframes pisca {
+    0%,
+    100% {
+        opacity: 0.2;
+        /* Opacidade no início e fim da animação */
+    }
+    50% {
+        opacity: 1;
+        /* Opacidade no meio da animação */
+    }
+}
+
+
+/* Estilo global para o corpo da página */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    
+}
+
+
+/* Estilo para o contêiner principal da urna */
+
+.urna {
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+
+
+/* Estilo para a tela da urna */
+
+.tela {
+    width: 500px;
+    height: 420px;
+    background: linear-gradient(to right, #f5f5f5, #d8d8d8);
+    border: 2px solid #999;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para o teclado */
+
+.teclado {
+    background-color: #999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo para as linhas do teclado */
+
+.teclado--linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teclado--botao:focus, .botao--branco:focus, .botao--corrige:focus, .botao--confirma:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+  }
+  
+
+/* Estilo para os botões do teclado */
+
+.teclado--botao {
+    width: 80px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.teclado--botao:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Estilo para o botão branco */
+
+.botao--branco {
+    background-color: #fff;
+    color: #00796b;
+    font-size: 15px;
+    border: 2px solid #00796b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao--branco:hover {
+    background-color: #00796b;
+    color: #fff;
+}
+
+/* Estilo para os botões corrige e confirma */
+
+.botao--corrige, .botao--confirma {
+    font-size: 15px;
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+/* Estilo específico para o botão corrige */
+
+.botao--corrige {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+.botao--corrige:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+/* Estilo específico para o botão confirma */
+
+.botao--confirma {
+    background-color: #388e3c;
+    color: #ffffff;
+}
+
+.botao--confirma:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+
+/* Estilo para os campos de números */
+
+.numero {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    border: 2px solid #00796b;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    background-color: #ffffff;
+    margin: 5px;
+    border-radius: 5px;
+    vertical-align: top;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Estilo para o efeito de piscar */
+
+.pisca {
+    animation: pisca 1s infinite;
+    /* Aplica animação de piscar infinitamente */
+}
+
+
+/* Estilo para as imagens dos candidatos */
+
+/* Estilo para as imagens dos candidatos */
+.info-imagem {
+    border: none;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui os itens igualmente ao longo do eixo principal (horizontal) */
+    font-size: 16px;
+    padding: 10px;
+    max-width: 300px; /* Ajuste conforme necessário */
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para as imagens dentro do contêiner de imagem */
+.info-imagem img {
+    max-width: 45%; /* Define a largura das imagens */
+    max-height: 100%; /* Mantém a proporção */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+/* Estilo para avisos grandes e gigantes */
+
+.aviso--grande,
+.aviso--gigante {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilo para avisos grandes */
+
+.aviso--grande {
+    font-size: 40px;
+    color: #d32f2f;
+}
+
+/* Estilo para avisos gigantes */
+
+.aviso--gigante {
+    font-size: 70px;
+    color: #d32f2f;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    color: #f0f0f0;
+    background: #121212;
+    transition: all 0.5s ease;
+}
+
+body.dark .urna {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .tela {
+    background: linear-gradient(to right, #2c2c2c, #3a3a3a);
+    border: 2px solid #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .teclado {
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .teclado--botao {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark .teclado--botao:hover {
+    background-color: #666;
+}
+
+body.dark .botao--branco {
+    background-color: #777;
+    color: #000;
+    border: 2px solid #aaa;
+}
+
+body.dark .botao--branco:hover {
+    background-color: #aaa;
+    color: #000;
+}
+
+body.dark .botao--corrige {
+    background-color: #b71c1c;
+}
+
+body.dark .botao--confirma {
+    background-color: #2e7d32;
+}
+
+body.dark .info-imagem {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .numero {
+    background-color: #333;
+    border: 2px solid #777;
+    color: #fff;
+}
+
+/* Botão de alternância de modo */
+.btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #666;
+}
+
+#next-vote-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #00796b; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#next-vote-btn:hover {
+    background-color: #005a4a; /* Cor de fundo ao passar o mouse */
+}
+
+.hidden {
+    display: none;
+}
